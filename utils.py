@@ -40,8 +40,9 @@ def get_image(image_path, input_height, input_width,
               resize_height=64, resize_width=64,
               crop=True, grayscale=False):
   image = imread(image_path, grayscale)
-  return transform(image, input_height, input_width,
-                   resize_height, resize_width, crop)
+  #return transform(image, input_height, input_width,
+  #                 resize_height, resize_width, crop)
+  return image
 
 def save_images(images, size, image_path):
   return imsave(inverse_transform(images), size, image_path)
