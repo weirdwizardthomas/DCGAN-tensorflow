@@ -8,6 +8,10 @@ Tensorflow implementation of [Deep Convolutional Generative Adversarial Networks
 * *To avoid the fast convergence of D (discriminator) network, G (generator) network is updated twice for each D network update, which differs from original paper.*
 
 
+## Why fork
+
+Undeclared variables in the `transform` function in `utils.py` caused crashed when used with a custom dataset. As a workaround, so I don't have to edit this change after every cloning (as I do clone this repo in my **Google Colabs** notebooks), I've forked the repo and replaced returning the function with the plain image. This does mean that the image dataset has to be preprocessed.
+
 ## Online Demo
 
 [<img src="https://raw.githubusercontent.com/carpedm20/blog/master/content/images/face.png">](http://carpedm20.github.io/faces/)
